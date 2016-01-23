@@ -1,8 +1,6 @@
 jenkinsslave1:
   name: jenkinsslave1
   image: evarga/jenkins-slave
-  expose:
-    - 22
 jenkins:
   image: jenkins
   name: jenkins

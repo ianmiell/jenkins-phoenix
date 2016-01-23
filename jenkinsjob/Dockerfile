@@ -4,11 +4,8 @@ RUN pip install setuptools PyYAML python-jenkins ordereddict
 RUN git clone https://git.openstack.org/openstack-infra/jenkins-job-builder
 WORKDIR jenkins-job-builder
 RUN python setup.py install
-ADD example_job.yaml /example_job.yaml
 RUN mkdir -p /etc/jenkins_jobs
+ADD jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 ADD scripts /scripts
-ADD jenkins_node.py /jenkins_node.py
-ADD jenkins_node.py /jenkins_node.py
-ADD startup.sh /startup.sh
 WORKDIR /scripts
-CMD startup.sh
+CMD /scripts/startup.sh

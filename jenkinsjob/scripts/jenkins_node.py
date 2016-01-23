@@ -6,4 +6,20 @@ for node in j.get_nodes():
 		create = False
 if create:
 	j.create_node('jenkinsslave1')
-
+#
+## create node with parameters
+#params = {
+#    'port': '22',
+#    'username': 'juser',
+#    'credentialsId': '10f3a3c8-be35-327e-b60b-a3e5edb0e45f',
+#    'host': 'my.jenkins.slave1'
+#}
+#server.create_node(
+#    'slave1',
+#    nodeDescription='my test slave',
+#    remoteFS='/home/juser',
+#    labels='precise',
+#    exclusive=True,
+#    launcher=jenkins.LAUNCHER_SSH,
+#    launcher_params=params)
+#

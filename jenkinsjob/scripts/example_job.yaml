@@ -11,7 +11,7 @@
     block-downstream: false
     block-upstream: false
     retry-count: 3
-    node: jenkinsslave1
+    node: master
     logrotate:
       daysToKeep: 3
       numToKeep: 20
