@@ -1,0 +1,25 @@
+- job:
+    name: eg_job
+    project-type: freestyle
+    defaults: global
+    description: 'Do not edit this job through the web!'
+    disabled: false
+    display-name: 'Created and stored job'
+    concurrent: true
+    workspace: /srv/build-area/eg_job
+    quiet-period: 5
+    block-downstream: false
+    block-upstream: false
+    retry-count: 3
+    node: jenkinsslave1
+    logrotate:
+      daysToKeep: 3
+      numToKeep: 20
+      artifactDaysToKeep: -1
+      artifactNumToKeep: -1
+    builders:
+      - list-files
+- builder:
+    name: list-files
+    builders:
+      - shell: 'ls'
