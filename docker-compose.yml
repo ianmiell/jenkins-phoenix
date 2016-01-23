@@ -1,0 +1,18 @@
+jenkinsslave1:
+  name: jenkinsslave1
+  image: evarga/jenkins-slave
+  expose:
+    - 22
+jenkins:
+  image: jenkins
+  name: jenkins
+  ports:
+    - "8080:8080"
+  links:
+    - jenkinsslave1
+jenkinsjob:
+  name: jenkinsjob
+  build: jenkinsjob
+  links:
+    - jenkins
+
