@@ -6,7 +6,9 @@ WORKDIR jenkins-job-builder
 RUN python setup.py install
 ADD example_job.yaml /example_job.yaml
 RUN mkdir -p /etc/jenkins_jobs
-ADD jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
+ADD scripts /scripts
 ADD jenkins_node.py /jenkins_node.py
-WORKDIR /
-CMD sleep 20 && python /jenkins_node.py && jenkins-jobs update /example_job.yaml && sleep infinity
+ADD jenkins_node.py /jenkins_node.py
+ADD startup.sh /startup.sh
+WORKDIR /scripts
+CMD startup.sh
