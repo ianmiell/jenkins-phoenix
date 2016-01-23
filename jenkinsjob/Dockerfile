@@ -9,4 +9,4 @@ RUN mkdir -p /etc/jenkins_jobs
 ADD jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 ADD jenkins_node.py /jenkins_node.py
 WORKDIR /
-CMD sleep 60 && python /jenkins_node.py && jenkins-jobs update /example_job.yaml && sleep infinity
+CMD sleep 20 && python /jenkins_node.py && jenkins-jobs update /example_job.yaml && sleep infinity
