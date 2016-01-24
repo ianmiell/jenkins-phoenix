@@ -5,7 +5,7 @@
          url: https://github.com/ianmiell/jenkins-phoenix.git
          branches:
            - origin/master
-         fastpoll: true
+         skip-tag: true
 - builder:
     name: list-files
     builders:
@@ -60,3 +60,5 @@
       - my-scm
     triggers:
       - github
+      - pollscm:
+          cron: "* * * * *"
