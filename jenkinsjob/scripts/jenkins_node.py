@@ -1,11 +1,25 @@
 import jenkins
 j = jenkins.Jenkins('http://jenkins:8080')
-create = True
-for node in j.get_nodes():
-	if node['name'] == 'jenkinsslave1':
-		create = False
-if create:
-	j.create_node('jenkinsslave1')
+print j.get_credentials()
+#params = {
+#	'port': '22',
+#	'username': 'jenkins',
+#	'password': 'jenkins',
+#	'host': 'jenkinsslave1'
+#}
+#create = True
+#for node in j.get_nodes():
+#	if node['name'] == 'jenkinsslave1':
+#		create = False
+#if create:
+#	j.create_node(
+#		'jenkinsslave1',
+#		nodeDescription='my test slave',
+#		remoteFS='/tmp',
+#		labels='jenkinsslave1',
+#		launcher=jenkins.LAUNCHER_SSH,
+#		launcher_params=params
+#	)
 #
 ## create node with parameters
 #params = {
