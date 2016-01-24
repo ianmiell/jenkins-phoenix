@@ -1,6 +1,12 @@
 jenkinsslave1:
   name: jenkinsslave1
   image: evarga/jenkins-slave
+jenkinsdockerslave1:
+  name: jenkinsdockerslave1
+  build: jenkinsdockerslave
+  volumes:                                                                                                                                                                    
+    - /var/run/docker.sock:/var/run/docker.sock                                                                                                                               
+    - /var/lib/docker:/var/lib/docker           
 jenkins:
   image: jenkins
   name: jenkins
@@ -8,6 +14,7 @@ jenkins:
     - "8080:8080"
   links:
     - jenkinsslave1
+    - jenkinsdockerslave1
 jenkinsjob:
   name: jenkinsjob
   build: jenkinsjob
