@@ -7,9 +7,8 @@ j = jenkins.Jenkins('http://jenkins:8080')
 #print j.get_plugins()
 print 'Installing plugins starting'
 info = j.install_plugin("docker-plugin")
-print info
 info = j.install_plugin("git")
-print info
+info = j.install_plugin("github")
 print 'Installing plugins done'
 
 

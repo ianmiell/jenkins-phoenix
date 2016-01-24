@@ -6,9 +6,12 @@ do
 done
 echo 'Jenkins up and running'
 ./jenkins_credentials.sh
+sleep 60
 python jenkins_node.py
+sleep 60
 python jenkins_plugins.py
+sleep 60
 jenkins-jobs update example_job.yaml 
-sleep 100
+sleep 60
 curl -XPOST http://jenkins:8080/safeRestart
 sleep infinity

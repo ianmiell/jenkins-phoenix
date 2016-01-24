@@ -5,6 +5,7 @@
          url: https://github.com/ianmiell/jenkins-phoenix.git
          branches:
            - origin/master
+         fastpoll: true
 - builder:
     name: list-files
     builders:
@@ -57,3 +58,5 @@
       - run-docker-echo
     scm:
       - my-scm
+    triggers:
+      - github
