@@ -15,9 +15,9 @@ jenkins:
   links:
     - jenkinsslave1
     - jenkinsdockerslave1
-jenkinsjob:
-  name: jenkinsjob
-  build: jenkinsjob
+jenkinssetup:
+  name: jenkinssetup
+  build: jenkinssetup
   links:
     - jenkins
 
