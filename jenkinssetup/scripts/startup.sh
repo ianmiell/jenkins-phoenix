@@ -4,14 +4,17 @@ while [[ $(curl -sL -w "%{http_code}\\n" "http://jenkins:8080" -o /dev/null) != 
 do
 	sleep 5
 done
+wait=20
 echo 'Jenkins up and running'
 ./jenkins_credentials.sh
-sleep 60
+echo Waiting $wait seconds
+sleep $wait
 python jenkins_node.py
-sleep 60
 python jenkins_plugins.py
-sleep 60
-jenkins-jobs update example_job.yaml 
-sleep 60
+echo Waiting $wait seconds
+sleep $wait
+jenkins-jobs update example_simple_job.yaml 
+jenkins-jobs update example_simple_docker_job.yaml 
+echo Restarting Jenkins
 curl -XPOST http://jenkins:8080/safeRestart
 sleep infinity

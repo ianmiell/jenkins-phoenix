@@ -12,4 +12,4 @@ curl -XPOST 'jenkins:8080/credential-store/domain/_/createCredentials' \
         }
     }'
 
-echo 'credentials created'
+echo 'Jenkins username/password credentials created'
