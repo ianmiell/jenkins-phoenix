@@ -20,9 +20,9 @@ jenkinssetup:
   build: jenkinssetup
   links:
     - jenkins
-jenkinsexport:
-  name: jenkinsexport
-  build: jenkinsexport
+jenkinscli:
+  name: jenkinscli
+  build: jenkinscli
   links:
     - jenkins
 
