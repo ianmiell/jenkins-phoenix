@@ -16,5 +16,5 @@ plugins = (
 print 'Installing plugins starting: ' + str(plugins)
 for p in plugins:
 	j.install_plugin(p)
-print 'Installing plugins done'
+print 'Plugins requested. Wait for install.'
 
