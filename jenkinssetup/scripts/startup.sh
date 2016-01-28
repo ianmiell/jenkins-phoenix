@@ -23,12 +23,14 @@ wait_for_jenkins
 # Set up plugins. Restart until complete
 # do a while loop waiting for confirmed installation
 python jenkins_plugins.py
+sleeptime=30
 while [[ $(python jenkins_check_plugins.py | tail -1) != 'OK' ]]
 do
 	restart_and_wait_for_jenkins
 	python jenkins_plugins.py
-	echo waiting for 60 before re-checking plugins
-	sleep 60
+	sleeptime=$(($sleeptime * 2))
+	echo waiting for $sleeptime before re-checking plugins
+	sleep $sleeptime
 done
 
 echo Plugin install complete
