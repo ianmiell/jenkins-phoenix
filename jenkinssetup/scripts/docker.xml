@@ -1,0 +1,23 @@
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <com.nirima.jenkins.plugins.docker.builder.DockerBuilderControl plugin="docker-plugin@0.16.0">
+      <option class="com.nirima.jenkins.plugins.docker.builder.DockerBuilderControlOptionProvisionAndStart">
+        <cloudName>docker</cloudName>
+        <templateId>evarga/jenkins-slave</templateId>
+      </option>
+    </com.nirima.jenkins.plugins.docker.builder.DockerBuilderControl>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

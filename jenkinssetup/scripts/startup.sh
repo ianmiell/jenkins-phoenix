@@ -26,10 +26,9 @@ python jenkins_plugins.py
 while [[ $(python jenkins_check_plugins.py | tail -1) != 'OK' ]]
 do
 	restart_and_wait_for_jenkins
-	echo waiting for 60 before retrying plugins
-	sleep 60
-	python jenkins_check_plugins.py
 	python jenkins_plugins.py
+	echo waiting for 60 before re-checking plugins
+	sleep 60
 done
 
 echo Plugin install complete
