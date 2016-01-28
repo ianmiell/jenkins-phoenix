@@ -1,12 +1,15 @@
-See [here](https://zwischenzugs.wordpress.com/2016/01/24/ci-as-code-stateless-jenkins-deployments-using-docker/)
+## Intro
 
-Tags
+See [here](https://zwischenzugs.wordpress.com/2016/01/24/ci-as-code-stateless-jenkins-deployments-using-docker/) for an explanation.
 
-v1.0 
+## Tags
+
+### v1.0
+
 basic job management using jenkins job controller
 basic credentials management
 
-v2.0
+### v2.0
 docker cloud setup
 improved plugin installation process
 cli container merged into setup container
