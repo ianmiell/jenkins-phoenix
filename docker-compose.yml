@@ -8,21 +8,18 @@ jenkinsdockerslave1:
     - /var/run/docker.sock:/var/run/docker.sock                                                                                                                               
     - /var/lib/docker:/var/lib/docker           
 jenkins:
-  image: jenkins
+  build: jenkins
   name: jenkins
   ports:
     - "8080:8080"
   links:
     - jenkinsslave1
     - jenkinsdockerslave1
+  volumes:                                                                                                                                                                    
+    - /var/run/docker.sock:/var/run/docker.sock                                                                                                                               
+    - /var/lib/docker:/var/lib/docker           
 jenkinssetup:
   name: jenkinssetup
   build: jenkinssetup
   links:
     - jenkins
-jenkinscli:
-  name: jenkinscli
-  build: jenkinscli
-  links:
-    - jenkins
-
