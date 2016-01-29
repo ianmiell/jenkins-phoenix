@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors/>
-  <version>1.625.3</version>
+  <version>1.642.1</version>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -20,11 +20,11 @@
       <templates>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
-          <labelString></labelString>
+          <labelString>dockercloud</labelString>
           <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
             <sshConnector plugin="ssh-slaves@1.9">
               <port>22</port>
-              <credentialsId>33aea28c-82ef-4ece-95dc-f7ab9af844ac</credentialsId>
+              <credentialsId>38c56507-4a40-4938-bedf-3a06975aa055</credentialsId>
               <jvmOptions></jvmOptions>
               <javaPath></javaPath>
               <maxNumRetries>0</maxNumRetries>
@@ -33,7 +33,7 @@
           </launcher>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
-          <instanceCap>1</instanceCap>
+          <instanceCap>100</instanceCap>
           <mode>NORMAL</mode>
           <retentionStrategy class="com.nirima.jenkins.plugins.docker.strategy.DockerOnceRetentionStrategy">
             <idleMinutes>10</idleMinutes>
@@ -41,7 +41,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>evarga/jenkins-slave</image>
+            <image>imiell/jenkinsdockerslave</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
@@ -59,7 +59,7 @@
             </extraHosts>
           </dockerTemplateBase>
           <removeVolumes>false</removeVolumes>
-          <pullStrategy>PULL_LATEST</pullStrategy>
+          <pullStrategy>PULL_ALWAYS</pullStrategy>
         </com.nirima.jenkins.plugins.docker.DockerTemplate>
       </templates>
       <serverUrl>http://172.17.0.1:4243</serverUrl>

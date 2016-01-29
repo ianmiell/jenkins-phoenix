@@ -1,6 +1,5 @@
 plugins = (
     "git",
     "github",
-    "urltrigger",
-    "docker-custom-build-environment",
+    "docker-plugin",
 )

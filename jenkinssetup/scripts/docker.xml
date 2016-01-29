@@ -20,31 +20,18 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <canRoam>true</canRoam>
+  <assignedNode>dockercloud</assignedNode>
+  <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
-  <builders/>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>echo $(hostname)</command>
+    </hudson.tasks.Shell>
+  </builders>
   <publishers/>
-  <buildWrappers>
-    <com.cloudbees.jenkins.plugins.okidocki.DockerBuildWrapper plugin="docker-custom-build-environment@1.6.4">
-      <selector class="com.cloudbees.jenkins.plugins.okidocki.DockerfileImageSelector">
-        <contextPath>/var/jenkins_home/jobs/docker-test/workspace</contextPath>
-        <dockerfile>/var/jenkins_home/jobs/docker-test/workspace/Dockerfile</dockerfile>
-      </selector>
-      <dockerHost plugin="docker-commons@1.2">
-        <uri>172.17.0.1:4243</uri>
-      </dockerHost>
-      <dockerRegistryCredentials></dockerRegistryCredentials>
-      <verbose>false</verbose>
-      <volumes class="empty-list"/>
-      <privileged>false</privileged>
-      <group></group>
-      <command>/bin/cat</command>
-      <forcePull>false</forcePull>
-      <net>bridge</net>
-    </com.cloudbees.jenkins.plugins.okidocki.DockerBuildWrapper>
-  </buildWrappers>
+  <buildWrappers/>
 </project>
