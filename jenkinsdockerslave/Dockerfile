@@ -1,6 +1,5 @@
 # This Dockerfile is used to build an image containing basic stuff to be used as a Jenkins slave build node.
 FROM ubuntu:trusty
-MAINTAINER Ervin Varga <ervin.varga@gmail.com>
 
 # Make sure the package repository is up to date.
 RUN apt-get update && apt-get -y upgrade && apt-get install -y openssh-server docker.io
