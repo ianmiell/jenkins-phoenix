@@ -8,5 +8,5 @@ plugins = jenkins_plugins_list.plugins
 print 'Installing plugins starting: ' + str(plugins)
 for p in plugins:
 	j.install_plugin(p)
-print 'Plugins requested. Wait for install.'
+print 'Plugins requested. Wait for install to complete.'
 

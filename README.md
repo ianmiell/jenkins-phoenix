@@ -2,6 +2,10 @@
 
 CI as code.
 
+[Phoenix](http://www.slideshare.net/IanMiell/clipboards/my-clips) [Deployment](https://www.thoughtworks.com/radar/tools/immutable-servers)
+
+Never worry about how your environment was built again, as you do it regularly.
+
 ## Intro
 
 See [here](https://zwischenzugs.wordpress.com/2016/01/24/ci-as-code-stateless-jenkins-deployments-using-docker/) for an explanation.

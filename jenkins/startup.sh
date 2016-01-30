@@ -8,6 +8,7 @@ sudo cron -L 8
 #socat -u FILE:config.xml TCP:jenkins:9000
 # If this is used, we need to trigger a restart also.
 socat -u TCP-LISTEN:9000,reuseaddr,fork OPEN:/var/jenkins_home/config.xml,creat,trunk &
+socat -u TCP-LISTEN:9001,reuseaddr,fork EXEC:'/replace_config.sh > /tmp/asd && tac /tmp/asd' &
 
 # The original entrypoint for the jenkins container
 /bin/tini -- /usr/local/bin/jenkins.sh

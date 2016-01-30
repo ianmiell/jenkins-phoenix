@@ -19,6 +19,8 @@ wait_for_jenkins
 
 # Set up credentials
 ./jenkins_credentials.sh
+python jenkins_credentials.py
+restart_and_wait_for_jenkins
 
 # Set up plugins. Restart until complete
 # do a while loop waiting for confirmed installation
@@ -35,10 +37,15 @@ done
 
 echo Plugin install complete
 
+echo Set up nodes
+python jenkins_node.py
+echo Set up nodes done
+
 echo Uploading jobs
 # Upload jobs using jenkins job builder
 jenkins-jobs update example_simple_job.yaml 
 jenkins-jobs update example_simple_docker_job.yaml
+echo Uploading jobs done
 
 # Use xml to upload docker job
 wget -qO- http://jenkins:8080/jnlpJars/jenkins-cli.jar > /scripts/jenkins-cli.jar
