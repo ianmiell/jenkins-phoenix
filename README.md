@@ -2,9 +2,7 @@
 
 CI as code.
 
-[Phoenix](http://www.slideshare.net/IanMiell/clipboards/my-clips) [Deployment](https://www.thoughtworks.com/radar/tools/immutable-servers)
-
-Never worry about how your environment was built again, as you do it regularly.
+[Phoenix](http://www.slideshare.net/IanMiell/clipboards/my-clips) [Deployment](https://www.thoughtworks.com/radar/tools/immutable-servers): Never worry about how your environment was built again, because you do it routinely.
 
 ## Intro
 
