@@ -4,7 +4,7 @@ curl -XPOST 'jenkins:8080/credential-store/domain/_/createCredentials' \
         "": "0", 
         "credentials": {
             "scope": "GLOBAL", 
-            "id": "", 
+            "id": "jenkins_1", 
             "username": "jenkins", 
             "password": "jenkins", 
             "description": "jenkinsslave1 credentials", 
