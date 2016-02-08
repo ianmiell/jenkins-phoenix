@@ -49,7 +49,7 @@ echo Uploading jobs done
 
 # Use xml to upload docker job
 wget -qO- http://jenkins:8080/jnlpJars/jenkins-cli.jar > /scripts/jenkins-cli.jar
-cat /scripts/docker.xml | java -jar /scripts/jenkins-cli.jar -s http://jenkins:8080 create-job 'docker-test'
+cat /scripts/docker.xml | java -jar /scripts/jenkins-cli.jar -s http://jenkins:8080 create-job 'dockercloud-test'
 
 # Sleep forever
 sleep infinity
