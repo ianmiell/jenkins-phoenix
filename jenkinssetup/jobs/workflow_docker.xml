@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1.13">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@1.13">
+    <script>node(&apos;dockercloud&apos;) {
+   stage &apos;Stage 1&apos;
+   echo &apos;Hello World 1&apos;
+   stage &apos;Stage 2&apos;
+   echo &apos;Hello World 2&apos;
+}</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+</flow-definition>

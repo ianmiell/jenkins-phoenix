@@ -11,4 +11,4 @@ for key in credentials.credentials.keys():
 				credentialsId = creds_dict['json']['credentials']['id']
 				s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				s.connect(('jenkins',9001))
-				s.send('CREDENTIALSID ' + credentialsId)
+				s.send('/var/jenkins_home/config.xml JENKINSSLAVE1_CREDENTIALSID ' + credentialsId)

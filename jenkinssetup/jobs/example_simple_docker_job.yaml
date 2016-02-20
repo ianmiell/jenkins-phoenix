@@ -16,7 +16,7 @@
     defaults: global
     description: 'Do not edit this job through the web!'
     disabled: false
-    display-name: 'Created and stored job'
+    display-name: 'Simple docker run job'
     concurrent: true
     workspace: /home/jenkins
     quiet-period: 5
