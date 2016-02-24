@@ -57,11 +57,12 @@ echo Uploading jobs
 pushd jobs
 # Use xml to upload docker job
 wget -qO- http://jenkins:8080/jnlpJars/jenkins-cli.jar > /jenkins_setup/jenkins-cli.jar
-cat docker.xml             | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'dockercloud-echo-job'
-cat docker_echo_job.xml    | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'docker-echo-job'
-cat simple_jenkins_job.xml | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'simple-jenkins-job'
-cat workflow_docker.xml    | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'dockercloud-pipeline-job'
-cat docker_build.xml       | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'docker-build'
+cat docker.xml                   | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'dockercloud-echo-job'
+cat docker_echo_job.xml          | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'docker-echo-job'
+cat simple_jenkins_job.xml       | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'simple-jenkins-job'
+cat workflow_docker.xml          | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'dockercloud-pipeline-job'
+cat docker_build.xml             | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'docker-build'
+cat simple_jenkins_swarm_job.xml | java -jar /jenkins_setup/jenkins-cli.jar -s http://jenkins:8080 create-job 'simple-jenkins-swarm-job'
 popd
 echo Uploading jobs done
 
