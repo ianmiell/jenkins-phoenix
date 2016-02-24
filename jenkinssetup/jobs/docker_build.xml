@@ -35,6 +35,7 @@
       <repoName>test</repoName>
       <noCache>true</noCache>
       <forcePull>true</forcePull>
+      <buildContext>/tmp/workspace</buildContext>
       <dockerfilePath>/tmp/workspace/docker-build/Dockerfile</dockerfilePath>
       <skipBuild>false</skipBuild>
       <skipDecorate>true</skipDecorate>
