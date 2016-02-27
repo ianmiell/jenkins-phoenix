@@ -37,25 +37,6 @@ Credential management improved
 
 Updated yaml to docker-compose v1.5+
 
-### v2.0
-
-docker cloud setup
-
-improved plugin installation process
-
-cli container merged into setup container
-
-jenkins contains config.xml with docker cloud setup
-
-jenkins mounts docker socket
-
-basic job management using jenkins job controller
-
-basic credentials management
-
-
-
-
 
 ## Running
 
