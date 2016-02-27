@@ -1,31 +1,5 @@
-jenkinsslave1:
-  container_name: jenkinsslave1
-  build: jenkinsslave1
-jenkinsdockerslave1:
-  container_name: jenkinsdockerslave1
-  build: jenkinsdockerslave1
-  volumes:                                                                                                                                                                    
-    - /var/run/docker.sock:/var/run/docker.sock                                                                                                                               
-    - /var/lib/docker:/var/lib/docker           
 jenkins:
-  build: jenkins
+  image: jenkins
   container_name: jenkins
   ports:
     - "8080:8080"
-    - "50000:50000"
-  links:
-    - jenkinsslave1
-    - jenkinsdockerslave1
-  volumes:                                                                                                                                                                    
-    - /var/run/docker.sock:/var/run/docker.sock                                                                                                                               
-    - /var/lib/docker:/var/lib/docker           
-jenkinssetup:
-  container_name: jenkinssetup
-  build: jenkinssetup
-  links:
-    - jenkins
-jenkinsswarmslave1:
-  container_name: jenkinsswarmslave1
-  build: jenkinsswarmslave1
-  links:
-    - jenkins
