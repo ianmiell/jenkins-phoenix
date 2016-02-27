@@ -49,8 +49,6 @@ jenkins contains config.xml with docker cloud setup
 
 jenkins mounts docker socket
 
-### v1.0
-
 basic job management using jenkins job controller
 
 basic credentials management
