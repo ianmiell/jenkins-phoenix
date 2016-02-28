@@ -8,3 +8,8 @@ jenkins:
     - "8080:8080"
   links:
     - jenkinsslave1
+jenkinssetup:
+  container_name: jenkinssetup
+  build: jenkinssetup
+  links:
+    - jenkins
