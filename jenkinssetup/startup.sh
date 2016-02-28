@@ -22,7 +22,6 @@ wait_for_jenkins
 echo Setting up credentials
 pushd credentials
 ./jenkins_credentials.sh
-python jenkins_credentials.py
 popd
 echo Setting up credentials complete
 
