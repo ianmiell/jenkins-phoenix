@@ -30,24 +30,3 @@ if create:
 		launcher=jenkins.LAUNCHER_SSH,
 		launcher_params=params
 	)
-
-# jenkins docker slave
-params = {
-	'port': '22',
-	'username': 'jenkins',
-	'credentialsId': credentialsId,
-	'host': 'jenkinsdockerslave1'
-}
-create = True
-for node in j.get_nodes():
-	if node['name'] == 'jenkinsdockerslave1':
-		create = False
-if create:
-	j.create_node(
-		'jenkinsdockerslave1',
-		nodeDescription='my docker test slave',
-		remoteFS='/tmp',
-		labels='jenkinsdockerslave',
-		launcher=jenkins.LAUNCHER_SSH,
-		launcher_params=params
-	)

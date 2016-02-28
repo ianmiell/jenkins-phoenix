@@ -2,7 +2,7 @@ jenkinsslave1:
   container_name: jenkinsslave1
   build: jenkinsslave1
 jenkins:
-  image: jenkins
+  build: jenkins
   container_name: jenkins
   ports:
     - "8080:8080"
