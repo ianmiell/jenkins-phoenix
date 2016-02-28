@@ -9,6 +9,13 @@ function wait_for_jenkins() {
 	echo 'Jenkins up and running'
 }
 
+
+function restart_and_wait_for_jenkins() {
+    echo Restarting Jenkins
+    curl -XPOST http://jenkins:8080/safeRestart
+    wait_for_jenkins
+}
+
 wait_for_jenkins
 
 # Set up credentials
@@ -24,6 +31,8 @@ pushd nodes
 python jenkins_node.py
 popd
 echo Set up nodes done
+
+restart_and_wait_for_jenkins
 
 # Sleep forever
 sleep infinity
