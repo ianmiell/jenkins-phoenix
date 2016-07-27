@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -XPOST 'jenkins:8080/credential-store/domain/_/createCredentials' \
+curl -XPOST 'jenkins:8080/credentials/store/system/domain/_/createCredentials' \
     --data-urlencode 'json={
         "": "0", 
         "credentials": {
