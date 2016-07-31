@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:trusty
 RUN groupadd -g 1000 jenkins
 RUN useradd -d /home/jenkins -s /bin/bash -m jenkins -u 1000 -g jenkins
 RUN echo jenkins:jpass | chpasswd

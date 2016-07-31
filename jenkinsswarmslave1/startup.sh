@@ -10,5 +10,5 @@ echo "$@"
 echo "and env:"
 echo "$(env)"
 set -x
-java -jar /home/jenkins/swarm-client-1.22-jar-with-dependencies.jar -fsroot "$SLAVE_JENKINS_HOME" -labels "$SLAVE_JENKINS_LABELS" -master http://$SLAVE_JENKINS_SERVER:$SLAVE_JENKINS_PORT $@
+java -jar /home/jenkins/swarm-client-1.22-jar-with-dependencies.jar -name jenkinsswarmslave1 -fsroot "$SLAVE_JENKINS_HOME" -labels "$SLAVE_JENKINS_LABELS" -master http://$SLAVE_JENKINS_SERVER:$SLAVE_JENKINS_PORT $@
 sleep infinity
